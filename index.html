@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <div id="home" class="portfolio-container">
+        <div class="left-container">
+            <div class="content">
+                <p class="intro">Hi! I am <span>Saswata Pradhan</span></p>
+                <h1>Web Developer.</h1>
+                <p class="detail">From a galaxy far far away...!</p>
+                <div class="btn-container">
+                    <button href="#contact">
+                        Hire Me
+                    </button>
+                    <button>View Project</button>
+                </div>
+            </div>
+            <div class="navlist">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#project">Project</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-container"></div>
+        <div class="design">
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
+
+    <div id="work">
+        <h2>My Work</h2>
+        <p>Here are some of the projects I have worked on...</p>
+    </div>
+    <div id="project">
+        <h2>Projects</h2>
+        <p>My own creations are---</p>
+    </div>
+
+    <div id="about">
+        <h2>About Me</h2>
+        <p>I am Saswata Pradhan, a passionate web developer with a focus on creating dynamic and responsive websites. I love coding and enjoy transforming ideas into functional websites using the latest web technologies.</p>
+    </div>
+
+    
+
+    <div id="contact">
+        <h2>Contact</h2>
+        <p>Email: <strong>cse21013@cemk.ac.in</strong></p>
+        <p>Phone: <strong>8436257691</strong></p>
+        <p>Location: <strong>Midnapore town,Paschim Medinipur</strong></p>
+        
+        <div class="icons" style="display: flex; justify-content: center; gap: 1rem; margin-top: 1rem;">
+            <a href="https://www.instagram.com/saswata.pradhan.31/" target="_blank" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://x.com/" target="_blank" aria-label="Twitter">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+        </div>
+    </div>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        document.querySelectorAll('.navlist a').forEach(anchor => {
+            anchor.addEventListener('click', function (event) {
+                event.preventDefault();
+                const targetSection = document.querySelector(this.getAttribute('href'));
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        (function() {
+            emailjs.init("saswata pradhan"); // Replace with your EmailJS user ID
+        })();
+
+        function sendMail(e) {
+            e.preventDefault(); // Prevent form submission reload
+
+            const serviceID = "service_33dh44j"; // Replace with your EmailJS service ID
+
+            const form = document.getElementById("contact");
+
+            emailjs.sendForm(serviceID, form)
+                .then(() => {
+                    alert("Mail sent successfully!");
+                    form.reset();
+                }, (err) => {
+                    alert("Failed to send email. Error: " + JSON.stringify(err));
+                });
+        }
+    </script>
+</body>
+</html>

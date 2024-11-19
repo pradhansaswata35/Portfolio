@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: #3877ff;
+}
+
+body {
+  background-color: #001f4d;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+.portfolio-container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+}
+
+.left-container, .right-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.left-container {
+  background-color: #262525;
+  width: 70%;
+  position: relative;
+  padding-left: 3rem;
+}
+
+.right-container {
+  background: linear-gradient(-45deg, #3877ff, #262626 70%);
+  width: 30%;
+}
+
+.navlist {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15vh;
+  z-index: 10;
+}
+
+.navlist ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navlist li {
+  margin: 0;
+}
+
+.navlist li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: #ffff;
+  font-weight: 500;
+  position: relative;
+}
+
+.navlist li a::after {
+  content: "";
+  position: absolute;
+  background: #fff;
+  width: 100%;
+  height: .1rem;
+  left: 0;
+  bottom: -5px;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform .5s;
+}
+
+.navlist li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.icons .fa-brands {
+  color: #ffff;
+  font-size: 1.7rem;
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.content {
+  margin-left: 4rem;
+}
+
+.content .intro {
+  font-size: 1.5rem;
+  color: #ffff;
+}
+
+.content .intro span {
+  color: #3877ff;
+}
+
+.content h1 {
+  font-size: 4rem;
+  color: #5DB9;
+}
+
+.content .detail {
+  font-size: 1.1rem;
+  color: #ffff;
+  max-width: 38rem;
+  margin: 1.1rem 0 3rem 0;
+  line-height: 1.8rem;
+  border-radius: .5rem;
+}
+
+.btn-container button {
+  border: .14rem solid #5054c8;
+  font-size: 1.2rem;
+  padding: .8rem 1.5rem;
+  border-radius: .5rem;
+  cursor: pointer;
+  transition: .5s ease;
+}
+
+button:nth-child(1) {
+  background: #3877ff;
+  color: #010906;
+}
+
+button:nth-child(2) {
+  background: transparent;
+  color: #5db9ee;
+  margin-left: 2rem;
+}
+
+button:nth-child(1):hover {
+  background: transparent;
+  color: #3877ff;
+}
+
+button:nth-child(2):hover {
+  background: #3877ff;
+  color: #010906;
+}
+
+.icons .fa-brands:hover {
+  cursor: pointer;
+  background: linear-gradient(#ffff, #3877ff);
+  -webkit-text-fill-color: transparent;
+}
+
+.design .circle {
+  aspect-ratio: 1;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+}
+
+.circle:nth-child(1) {
+  background: linear-gradient(90deg, transparent, #262626 50%);
+  width: 38rem;
+}
+
+.circle:nth-child(2) {
+  background-image: url("1000149201-removebg-preview (1).png");
+  width: 30rem;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border: .5rem solid white;
+  box-shadow: 
+    0 0 1rem #fff,
+    inset 0 0 1rem #fff,
+    0 0 2rem #3877ff,
+    inset 0 0 2rem #3877ff,
+    0 0 4rem #3877ff,
+    inset 0 0 4rem #3877ff;
+}
+
+#contact {
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+#contact h2 {
+  font-size: 3rem;
+  color: #3877ff;
+}
+
+#contact p {
+  font-size: 1.5rem;
+  color: #333;
+  line-height: 2rem;
+}
+
+#work {
+    min-height: 100vh;
+    background: linear-gradient(-45deg, #3877ff, #262525 70%);
+    padding: 2rem;
+    color: #ffffff;
+}
+
+#work h2 {
+    font-size: 3rem;
+    color: #3877ff;
+}
+
+#work p {
+    font-size: 1.5rem;
+    color: #f0f0f0;
+    line-height: 2rem;
+}
+
+#about {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(-45deg, #3877ff, #262525 70%);
+}
+
+#about h2 {
+  font-size: 3rem;
+  color: #3877ff;
+  margin-bottom: 1rem;
+}
+
+#about p {
+  font-size: 1.5rem;
+  color: #f0f0f0;
+  line-height: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#project {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(-45deg, #3877ff, #262525 70%);
+}
+
+#project h2 {
+  font-size: 3rem;
+  color: #3877ff;
+  margin-bottom: 1rem;
+}
+
+#project p {
+  font-size: 1.5rem;
+  color: #f0f0f0;
+  line-height: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#contact {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(-45deg, #3877ff, #262525 70%);
+}
+
+#contact h2 {
+  font-size: 3rem;
+  color: #3877ff;
+}
+
+#contact p {
+  font-size: 1.5rem;
+  color: #f0f0f0;
+  line-height: 2rem;
+}
